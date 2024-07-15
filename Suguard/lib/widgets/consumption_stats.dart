@@ -8,7 +8,7 @@ class ConsumptionStats extends StatelessWidget {
   Widget build(BuildContext context) {
     final auth = Provider.of<AuthService>(context);
     final userId = auth.user?.id ?? 0;
-    final String baseUrl = "http://192.168.35.223:8000"; // baseUrl을 명시적으로 지정합니다.
+    final String baseUrl = "http://192.168.35.223:8000"; // baseUrl을 명시적으로 지정
     final ApiService _apiService = ApiService(baseUrl: baseUrl);
 
     return FutureBuilder<Map<String, dynamic>>(
