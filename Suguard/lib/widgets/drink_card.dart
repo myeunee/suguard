@@ -23,7 +23,7 @@ class _DrinkCardState extends State<DrinkCard> {
     final apiService = Provider.of<ApiService>(context, listen: false);
     final authService = Provider.of<AuthService>(context, listen: false);
 
-    // 서버에서 좋아요 상태를 가져오는 로직을 추가할 수 있습니다.
+    // 서버에서 좋아요 상태를 가져오는 로직을 추가
     isLiked = false;
     apiService.checkIfLiked(authService.user!.id, widget.drink.id).then((liked) {
       setState(() {
